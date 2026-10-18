@@ -1,0 +1,79 @@
+{
+  "estudios_entrenamiento": 4407,
+  "etiquetas": {
+    "ACL": {
+      "positivos_explicitos": 24,
+      "negativos_explicitos": 34,
+      "sin_etiqueta_binaria": 4349
+    },
+    "MCL": {
+      "positivos_explicitos": 9,
+      "negativos_explicitos": 49,
+      "sin_etiqueta_binaria": 4349
+    },
+    "Medial Meniscus": {
+      "positivos_explicitos": 26,
+      "negativos_explicitos": 32,
+      "sin_etiqueta_binaria": 4349
+    },
+    "Lateral Meniscus": {
+      "positivos_explicitos": 23,
+      "negativos_explicitos": 35,
+      "sin_etiqueta_binaria": 4349
+    },
+    "Medial OA": {
+      "positivos_explicitos": 15,
+      "negativos_explicitos": 43,
+      "sin_etiqueta_binaria": 4349
+    },
+    "Lateral OA": {
+      "positivos_explicitos": 11,
+      "negativos_explicitos": 47,
+      "sin_etiqueta_binaria": 4349
+    },
+    "PF OA": {
+      "positivos_explicitos": 21,
+      "negativos_explicitos": 37,
+      "sin_etiqueta_binaria": 4349
+    },
+    "Effusion": {
+      "positivos_explicitos": 35,
+      "negativos_explicitos": 23,
+      "sin_etiqueta_binaria": 4349
+    },
+    "Synovitis": {
+      "positivos_explicitos": 27,
+      "negativos_explicitos": 31,
+      "sin_etiqueta_binaria": 4349
+    },
+    "Baker's": {
+      "positivos_explicitos": 12,
+      "negativos_explicitos": 46,
+      "sin_etiqueta_binaria": 4349
+    },
+    "Contusion": {
+      "positivos_explicitos": 19,
+      "negativos_explicitos": 39,
+      "sin_etiqueta_binaria": 4349
+    },
+    "Fracture": {
+      "positivos_explicitos": 18,
+      "negativos_explicitos": 40,
+      "sin_etiqueta_binaria": 4349
+    }
+  },
+  "plano_corte": "Sagittal",
+  "visualizacion": {
+    "filas": 512,
+    "columnas": 512,
+    "fotometria": "MONOCHROME2",
+    "frame_multiframe": null,
+    "voi_aplicado": true,
+    "contraste": "normalización visual con percentiles 1 y 99",
+    "orientacion": "original del DICOM, sin giros ni volteos",
+    "uso": "figura ilustrativa; no determina un diagnóstico"
+  },
+  "competencia": "rsna-knee-abnormality-detection",
+  "archivo_remoto": "train_series/1.2.826.0.1.3680043.8.498.10004873229099053869093324292195817260/1.2.826.0.1.3680043.8.498.12343110195036213483454091715412333772/1.2.826.0.1.3680043.8.498.10374285052733466977592225981851620435.dcm",
+  "procedencia": "Kaggle oficial"
+}

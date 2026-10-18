@@ -1,0 +1,15 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Datos locales de la competencia y pesos; no publicar con el notebook.
+muestra_rsna/datos/
+datos_ff/
+resultados_ff/*.pt

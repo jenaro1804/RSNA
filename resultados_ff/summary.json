@@ -1,0 +1,104 @@
+{
+  "n_train": 46,
+  "n_val": 12,
+  "input_shape": [
+    5,
+    32,
+    32
+  ],
+  "experiments": [
+    {
+      "experiment": "A",
+      "hidden": [
+        64
+      ],
+      "lr": 0.001,
+      "epochs": 40,
+      "batch_size": 8,
+      "parameters": 328524,
+      "best_epoch": 1,
+      "train_loss": 0.5529663562774658,
+      "val_loss": 0.663375198841095,
+      "seconds": 2.0578224000000773,
+      "binary_accuracy": 0.6388888888888888,
+      "f1_micro": 0.38095238095238093,
+      "precision_micro": 0.35555555555555557,
+      "recall_micro": 0.41025641025641024,
+      "auc_macro": 0.46130291005290996,
+      "auc_classes": 10
+    },
+    {
+      "experiment": "B",
+      "hidden": [
+        64
+      ],
+      "lr": 0.0001,
+      "epochs": 40,
+      "batch_size": 8,
+      "parameters": 328524,
+      "best_epoch": 3,
+      "train_loss": 0.5407945513725281,
+      "val_loss": 0.6103980541229248,
+      "seconds": 2.083791199999723,
+      "binary_accuracy": 0.6875,
+      "f1_micro": 0.34782608695652173,
+      "precision_micro": 0.4,
+      "recall_micro": 0.3076923076923077,
+      "auc_macro": 0.4626984126984127,
+      "auc_classes": 10
+    },
+    {
+      "experiment": "C",
+      "hidden": [
+        128,
+        64
+      ],
+      "lr": 0.001,
+      "epochs": 40,
+      "batch_size": 8,
+      "parameters": 664524,
+      "best_epoch": 2,
+      "train_loss": 0.5222595930099487,
+      "val_loss": 0.6409277319908142,
+      "seconds": 2.346050500000274,
+      "binary_accuracy": 0.6458333333333334,
+      "f1_micro": 0.2608695652173913,
+      "precision_micro": 0.3,
+      "recall_micro": 0.23076923076923078,
+      "auc_macro": 0.41690476190476194,
+      "auc_classes": 10
+    }
+  ],
+  "preferred_by_val_loss": "B",
+  "constant_baseline": {
+    "val_loss": 0.5850012302398682,
+    "binary_accuracy": 0.7291666666666666,
+    "f1_micro": 0.38095238095238093,
+    "precision_micro": 0.5,
+    "recall_micro": 0.3076923076923077,
+    "auc_macro": 0.5,
+    "auc_classes": 10
+  },
+  "observations": [
+    "A: capas [64], lr=0.001, 40 épocas. La pérdida de entrenamiento disminuyó 0.5473 desde la primera época. La menor pérdida de validación fue 0.6634 en la época 1; al final fue 1.2318 (aumento respecto al mínimo: 0.5684). F1 micro del checkpoint: 0.3810; AUC macro: 0.4613 en 10 hallazgos.",
+    "B: capas [64], lr=0.0001, 40 épocas. La pérdida de entrenamiento disminuyó 0.4838 desde la primera época. La menor pérdida de validación fue 0.6104 en la época 3; al final fue 0.7518 (aumento respecto al mínimo: 0.1414). F1 micro del checkpoint: 0.3478; AUC macro: 0.4627 en 10 hallazgos.",
+    "C: capas [128, 64], lr=0.001, 40 épocas. La pérdida de entrenamiento disminuyó 0.5977 desde la primera época. La menor pérdida de validación fue 0.6409 en la época 2; al final fue 1.3234 (aumento respecto al mínimo: 0.6825). F1 micro del checkpoint: 0.2609; AUC macro: 0.4169 en 10 hallazgos.",
+    "Al reducir la tasa de A a B, la pérdida mínima de validación cambió de 0.6634 a 0.6104. La menor tasa ralentiza el aprendizaje; el resultado debe leerse junto con las curvas.",
+    "C tiene 664,524 parámetros frente a 328,524 de A. Su F1 micro cambió de 0.3810 a 0.2609; aumentar la capacidad no garantiza una mejora en todos los indicadores.",
+    "La configuración preferida por pérdida es B (0.6104). La referencia constante obtiene 0.5850. La red no supera esa referencia en pérdida de validación.",
+    "En los tres casos la pérdida de entrenamiento sigue bajando después del checkpoint mientras la pérdida de validación termina más alta: esto es evidencia de sobreajuste en esta partición.",
+    "No se puede calcular AUC para: Lateral OA, Fracture. La sensibilidad tampoco se define cuando no hay positivos."
+  ],
+  "versions": {
+    "torch": "2.14.1",
+    "numpy": "2.5.4",
+    "pandas": "3.0.6",
+    "matplotlib": "3.11.2",
+    "scikit-learn": "1.9.1",
+    "pydicom": "3.0.2",
+    "python": "3.12.14",
+    "device": "cpu",
+    "seed": 42
+  },
+  "dataset_sha256": "dcf4a359700ebafb1fcfd1dc1f2a80abcc00f70f490d767682ef50f4fc0a012b"
+}
